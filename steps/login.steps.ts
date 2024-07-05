@@ -9,3 +9,6 @@ Then('I should see the title {string}', async (expectedTitle) => {
 Then('I will login as {string}', async (userName) => {
   await new Login(getPage()).loginAsUser(userName);
 });
+Then('I will not be able to login as {string}', async (lockedoutUserName) => {
+  await new Login(getPage()).loginAsUser(lockedoutUserName);
+});
